@@ -13,6 +13,7 @@
 		FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */; };
 		FA45CE0E1FBEF5D400CCDC1D /* CalculationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */; };
 		FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */; };
+		FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewControllerTest.swift; sourceTree = "<group>"; };
 		FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculationViewController.xib; sourceTree = "<group>"; };
 		FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
+		FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidatorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				FA45CE021FBEE8BC00CCDC1D /* Info.plist */,
 				FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */,
+				FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */,
 			);
 			path = MathPowerTests;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */,
 				FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

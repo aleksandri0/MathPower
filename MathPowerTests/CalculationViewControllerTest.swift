@@ -23,6 +23,22 @@ class CalculationViewControllerTest: XCTestCase {
         XCTAssertEqual(receivedAnswer, enteredAnswer)
     }
     
+    func test_nilTextAnswer_emptyAnswerRouted() {
+        var receivedAnswer = ""
+        let sut = makeSUT() { receivedAnswer = $0 }
+        sut.answerTextField.setTextAndSendEvent(nil)
+        
+        XCTAssertEqual(receivedAnswer, "")
+    }
+    
+    func test_emptyTextAnswer_emptyAnswerRouted() {
+        var receivedAnswer = ""
+        let sut = makeSUT() { receivedAnswer = $0 }
+        sut.answerTextField.setTextAndSendEvent("")
+        
+        XCTAssertEqual(receivedAnswer, "")
+    }
+    
     func makeSUT(title: String = "", calculation: String = "", navigationButtonTitle: String = "", submitAnswerCallback: @escaping (String) -> Void = { _ in }) -> CalculationViewController {
         let sut = CalculationViewController(title: title, calculation: calculation, navigationButtonTitle: navigationButtonTitle, submitAnswerCallback: submitAnswerCallback)
         _ = sut.view
@@ -33,7 +49,7 @@ class CalculationViewControllerTest: XCTestCase {
 }
 
 extension UITextField {
-    func setTextAndSendEvent(_ text: String) {
+    func setTextAndSendEvent(_ text: String?) {
         self.text = text
         sendActions(for: .editingChanged)
     }
