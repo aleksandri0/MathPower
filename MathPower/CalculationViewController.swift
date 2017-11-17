@@ -16,13 +16,18 @@ enum AnswerType: Equatable {
     }
 }
 
-class AnswerValidator {
-    
-    func isValid(_ answer: String) -> AnswerType {
+class AnswerValidator: Equatable {
+    func isValid(_ answer: String?) -> AnswerType {
+        guard let answer = answer else {
+            return .notValid
+        }
         let valid = !answer.isEmpty && answer.range(of: "[^0-9.-]", options: .regularExpression) == nil
         return valid ? .valid(answer) : .notValid
     }
     
+    static func ==(lhs: AnswerValidator, rhs: AnswerValidator) -> Bool {
+        return lhs === rhs
+    }
 }
 
 class CalculationViewController: UIViewController, UITextFieldDelegate {
@@ -34,12 +39,14 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
     private var screnTitle = ""
     private var navigationButtonTitle = ""
     private(set) var submitAnswerCallback: ((String) -> Void)? = nil
+    private(set) var answerValidator = AnswerValidator()
     
-    convenience init(title: String, calculation: String, navigationButtonTitle: String, submitAnswerCallback: @escaping (String) -> Void) {
+    convenience init(title: String, calculation: String, navigationButtonTitle: String, validator: AnswerValidator, submitAnswerCallback: @escaping (String) -> Void) {
         self.init()
         self.screnTitle = title
         self.calculation = calculation
         self.navigationButtonTitle = navigationButtonTitle
+        self.answerValidator = validator
         self.submitAnswerCallback = submitAnswerCallback
     }
     
@@ -51,13 +58,13 @@ class CalculationViewController: UIViewController, UITextFieldDelegate {
         
         answerTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         answerTextField.becomeFirstResponder()
-
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-        if let text = textField.text, !text.isEmpty {
-            submitAnswerCallback?(text)
-        } else {
+        switch answerValidator.isValid(textField.text) {
+        case .valid(let value):
+            submitAnswerCallback?(value)
+        case .notValid:
             submitAnswerCallback?("")
         }
     }

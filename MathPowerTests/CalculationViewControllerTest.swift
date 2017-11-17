@@ -15,7 +15,7 @@ class CalculationViewControllerTest: XCTestCase {
  
     func test_answerEntered_answerRouted() {
         var receivedAnswer = ""
-        let enteredAnswer = "A1"
+        let enteredAnswer = "1"
         
         let sut = makeSUT() { receivedAnswer = $0 }
         sut.answerTextField.setTextAndSendEvent(enteredAnswer)
@@ -39,8 +39,15 @@ class CalculationViewControllerTest: XCTestCase {
         XCTAssertEqual(receivedAnswer, "")
     }
     
-    func makeSUT(title: String = "", calculation: String = "", navigationButtonTitle: String = "", submitAnswerCallback: @escaping (String) -> Void = { _ in }) -> CalculationViewController {
-        let sut = CalculationViewController(title: title, calculation: calculation, navigationButtonTitle: navigationButtonTitle, submitAnswerCallback: submitAnswerCallback)
+    func test_validatorRouted() {
+        let validator = AnswerValidator()
+        let sut = makeSUT(validator: validator)
+        
+        XCTAssertEqual(sut.answerValidator, validator)
+    }
+    
+    func makeSUT(title: String = "", calculation: String = "", navigationButtonTitle: String = "", validator: AnswerValidator = AnswerValidator(), submitAnswerCallback: @escaping (String) -> Void = { _ in }) -> CalculationViewController {
+        let sut = CalculationViewController(title: title, calculation: calculation, navigationButtonTitle: navigationButtonTitle, validator: validator, submitAnswerCallback: submitAnswerCallback)
         _ = sut.view
         
         return sut

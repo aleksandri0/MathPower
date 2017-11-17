@@ -7,6 +7,7 @@ class AnswerValidatorTest: XCTestCase {
     func test_invalidAnswers_returnsInvalidResults() {
         XCTAssertEqual(AnswerValidator().isValid("A1"), AnswerType.notValid)
         XCTAssertEqual(AnswerValidator().isValid(""), AnswerType.notValid)
+        XCTAssertEqual(AnswerValidator().isValid(nil), AnswerType.notValid)
         XCTAssertEqual(AnswerValidator().isValid("1.1a"), AnswerType.notValid)
     }
     
