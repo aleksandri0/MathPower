@@ -12,8 +12,18 @@ class ResultsViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT(title: "Result").title, "Result")
     }
     
-    func makeSUT(title: String = "", summary: String = "") -> ResultsViewController {
-        let sut = ResultsViewController(title: title, summary: summary)
+    func test_viewDidLoad_noAnswers_rendersAnswers() {        
+        XCTAssertEqual(makeSUT(answers: []).tableView.numberOfRows(inSection: 0), 0)
+        XCTAssertEqual(makeSUT(answers: ["1"]).tableView.numberOfRows(inSection: 0), 1)
+    }
+    
+    
+    
+    func makeSUT(
+        title: String = "",
+        summary: String = "",
+        answers: [String] = []) -> ResultsViewController {
+        let sut = ResultsViewController(title: title, summary: summary, answers: answers)
         _ = sut.view
         
         return sut

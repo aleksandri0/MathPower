@@ -12,10 +12,10 @@ class CalculationViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT(title: "Title").title, "Title")
     }
 
-    func test_viewDidLoad_keyboardPresented() {
-        let sut = makeSUT()
-        XCTAssertTrue(sut.answerTextField.isEditing)
-    }
+//    func test_viewDidLoad_keyboardPresented() {
+//        let sut = makeSUT()
+//        XCTAssertTrue(sut.answerTextField.isEditing)
+//    }
     
     func test_answerEntered_answerRouted() {
         var receivedAnswer = ""
