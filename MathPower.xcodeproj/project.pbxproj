@@ -13,7 +13,10 @@
 		FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */; };
 		FA45CE0E1FBEF5D400CCDC1D /* CalculationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */; };
 		FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */; };
+		FA91EE7E1FD5A03800D917A8 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA91EE7D1FD5A03800D917A8 /* ResultsViewController.xib */; };
 		FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */; };
+		FACF8FF51FBF49FC00688000 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */; };
+		FACF8FF71FBF4A8F00688000 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,10 @@
 		FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewControllerTest.swift; sourceTree = "<group>"; };
 		FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculationViewController.xib; sourceTree = "<group>"; };
 		FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
+		FA91EE7D1FD5A03800D917A8 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidatorTest.swift; sourceTree = "<group>"; };
+		FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
+		FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 				FA45CDF71FBEE8BC00CCDC1D /* Info.plist */,
 				FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */,
 				FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */,
+				FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */,
+				FA91EE7D1FD5A03800D917A8 /* ResultsViewController.xib */,
 			);
 			path = MathPower;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 				FA45CE021FBEE8BC00CCDC1D /* Info.plist */,
 				FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */,
 				FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */,
+				FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */,
 			);
 			path = MathPowerTests;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 				FA45CE0E1FBEF5D400CCDC1D /* CalculationViewController.xib in Resources */,
 				FA45CDF61FBEE8BC00CCDC1D /* LaunchScreen.storyboard in Resources */,
 				FA45CDF31FBEE8BC00CCDC1D /* Assets.xcassets in Resources */,
+				FA91EE7E1FD5A03800D917A8 /* ResultsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +215,7 @@
 			files = (
 				FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */,
 				FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */,
+				FACF8FF71FBF4A8F00688000 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +225,7 @@
 			files = (
 				FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */,
 				FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */,
+				FACF8FF51FBF49FC00688000 /* ResultsViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
