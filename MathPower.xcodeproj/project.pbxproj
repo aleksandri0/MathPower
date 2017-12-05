@@ -19,6 +19,8 @@
 		FA92BE1B1FD6C452000224B9 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA92BE1A1FD6C452000224B9 /* CorrectAnswerCell.xib */; };
 		FA92BE1D1FD6C4C3000224B9 /* ResultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92BE1C1FD6C4C3000224B9 /* ResultLabel.swift */; };
 		FA92BE1F1FD6D559000224B9 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */; };
+		FA92BE211FD6DE16000224B9 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */; };
+		FA92BE231FD6DE4D000224B9 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */; };
 		FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */; };
 		FACF8FF51FBF49FC00688000 /* ResultsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */; };
 		FACF8FF71FBF4A8F00688000 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */; };
@@ -51,6 +53,8 @@
 		FA92BE1A1FD6C452000224B9 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		FA92BE1C1FD6C4C3000224B9 /* ResultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLabel.swift; sourceTree = "<group>"; };
 		FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
+		FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
+		FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidatorTest.swift; sourceTree = "<group>"; };
 		FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTest.swift; sourceTree = "<group>"; };
 		FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				FA92BE1A1FD6C452000224B9 /* CorrectAnswerCell.xib */,
 				FA92BE1C1FD6C4C3000224B9 /* ResultLabel.swift */,
 				FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */,
+				FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */,
+				FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */,
 			);
 			path = MathPower;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 				FA92BE191FD6A7F6000224B9 /* WrongAnswerCell.swift in Sources */,
 				FA92BE171FD6A26B000224B9 /* CorrectAnswerCell.swift in Sources */,
 				FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */,
+				FA92BE231FD6DE4D000224B9 /* UITableViewExtension.swift in Sources */,
+				FA92BE211FD6DE16000224B9 /* PresentableAnswer.swift in Sources */,
 				FA92BE1D1FD6C4C3000224B9 /* ResultLabel.swift in Sources */,
 				FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */,
 				FACF8FF71FBF4A8F00688000 /* ResultsViewController.swift in Sources */,

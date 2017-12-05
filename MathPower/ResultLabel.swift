@@ -10,6 +10,11 @@ class ResultLabel: UILabel {
         self.calculation = calculation
         self.answer = answer
         self.wrongAnswer = wrongAnswer
+        
+        let presentableWrongAnswer = wrongAnswer.flatMap { "(\($0))" } ?? ""
+        
+        text = calculation + " = " + answer + presentableWrongAnswer
+        
     }
     
 }

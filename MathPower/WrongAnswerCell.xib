@@ -18,14 +18,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-nD-91c" customClass="ResultLabel" customModule="MathPower" customModuleProvider="target">
-                        <rect key="frame" x="7" y="12" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-nD-91c" customClass="ResultLabel" customModule="MathPower" customModuleProvider="target">
+                        <rect key="frame" x="20" y="12" width="335" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="VKi-nD-91c" firstAttribute="centerY" secondItem="pVX-dt-hZj" secondAttribute="centerY" id="7Uh-0D-6jv"/>
+                    <constraint firstAttribute="trailing" secondItem="VKi-nD-91c" secondAttribute="trailing" constant="20" symbolic="YES" id="eHl-TY-Ieq"/>
+                    <constraint firstItem="VKi-nD-91c" firstAttribute="leading" secondItem="pVX-dt-hZj" secondAttribute="leading" constant="20" symbolic="YES" id="gIs-06-H2O"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="label" destination="VKi-nD-91c" id="0r9-c4-xyB"/>

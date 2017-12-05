@@ -18,14 +18,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efT-iL-31O" customClass="ResultLabel" customModule="MathPower" customModuleProvider="target">
-                        <rect key="frame" x="16" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efT-iL-31O" customClass="ResultLabel" customModule="MathPower" customModuleProvider="target">
+                        <rect key="frame" x="20" y="11" width="335" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="efT-iL-31O" firstAttribute="leading" secondItem="wEY-Qe-DWb" secondAttribute="leading" constant="20" symbolic="YES" id="1gg-1M-FqY"/>
+                    <constraint firstItem="efT-iL-31O" firstAttribute="centerY" secondItem="wEY-Qe-DWb" secondAttribute="centerY" id="Dcx-iU-GPZ"/>
+                    <constraint firstAttribute="trailing" secondItem="efT-iL-31O" secondAttribute="trailing" constant="20" symbolic="YES" id="WSm-Wj-4pl"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="label" destination="efT-iL-31O" id="een-ki-Ore"/>
