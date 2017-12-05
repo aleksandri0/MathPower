@@ -1,6 +1,9 @@
 import UIKit
 
 struct PresentableAnswer {
+    let calculation: String
+    let answer: String
+    let wrongAnswer: String?
     let isCorrect: Bool
 }
 
@@ -26,6 +29,13 @@ class ResultsViewController: UIViewController {
         
         title = screenTitle
         headerLabel.text = summary
+        
+        tableView.register(
+            UINib(nibName: "CorrectAnswerCell", bundle: Bundle.main),
+            forCellReuseIdentifier: "CorrectAnswerCell")
+        tableView.register(
+            UINib(nibName: "WrongAnswerCell", bundle: Bundle.main),
+            forCellReuseIdentifier: "WrongAnswerCell")
     }
 }
 
@@ -42,10 +52,26 @@ extension ResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let answer = answers[indexPath.row]
         if answer.isCorrect {
-            return CorrectAnswerCell()
+            return correctAnswerCell(answer)
         }
-        return WrongAnswerCell()
+        return wrongAnswerCell(answer)
     }
+    
+    private func correctAnswerCell(_ answer: PresentableAnswer) -> CorrectAnswerCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
+        cell.label.configure(withCalculation: answer.calculation, answer: answer.answer, wrongAnswer: nil)
+        
+        return cell
+    }
+    
+    private func wrongAnswerCell(_ answer: PresentableAnswer) -> WrongAnswerCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
+        cell.label.configure(withCalculation: answer.calculation, answer: answer.answer, wrongAnswer: answer.wrongAnswer)
+
+        return cell
+    }
+    
+    
     
     
 }
