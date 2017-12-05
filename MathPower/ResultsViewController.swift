@@ -23,6 +23,7 @@ class ResultsViewController: UIViewController {
         title = screenTitle
         headerLabel.text = summary
         
+        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(CorrectAnswerCell.self)
         tableView.register(WrongAnswerCell.self)
     }
@@ -63,5 +64,13 @@ extension ResultsViewController: UITableViewDataSource {
         
         return cell
     }
+}
+
+extension ResultsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
 }
 
