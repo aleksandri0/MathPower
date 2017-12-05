@@ -33,12 +33,8 @@ class ResultsViewController: UIViewController {
         title = screenTitle
         headerLabel.text = summary
         
-        tableView.register(
-            UINib(nibName: "CorrectAnswerCell", bundle: Bundle.main),
-            forCellReuseIdentifier: "CorrectAnswerCell")
-        tableView.register(
-            UINib(nibName: "WrongAnswerCell", bundle: Bundle.main),
-            forCellReuseIdentifier: "WrongAnswerCell")
+        tableView.register(CorrectAnswerCell.self)
+        tableView.register(WrongAnswerCell.self)
     }
 }
 
@@ -61,24 +57,39 @@ extension ResultsViewController: UITableViewDataSource {
     }
     
     private func correctAnswerCell(_ answer: PresentableAnswer) -> CorrectAnswerCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
+        let cell = tableView.dequeueCell(CorrectAnswerCell.self)!
         cell.configure(withCalculation: answer.calculation, answer: answer.answer)
         
         return cell
     }
     
     private func wrongAnswerCell(_ answer: PresentableAnswer) -> WrongAnswerCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as? WrongAnswerCell,
-            let wrongAnswer = answer.wrongAnswer else {
-                fatalError("Error appears while creating wrong answer cell")
+        guard let wrongAnswer = answer.wrongAnswer else {
+            fatalError("Error appears while creating wrong answer cell")
         }
         
+        let cell = tableView.dequeueCell(WrongAnswerCell.self)!
         cell.configure(withCalculation: answer.calculation, correctAnswer: answer.answer, wrongAnswer: wrongAnswer)
         
         return cell
     }
+}
+
+extension UITableView {
     
+    func register(_ type: UITableViewCell.Type) {
+        let typeName = String(describing: type)
+        register(UINib(nibName: typeName, bundle: Bundle.main), forCellReuseIdentifier: typeName)
+    }
     
-    
+    func dequeueCell<T>(_ type: T.Type) -> T? {
+        let typeName = String(describing: type)
+        return dequeueReusableCell(withIdentifier: typeName) as? T
+    }
     
 }
+
+
+
+
+
