@@ -4,7 +4,10 @@ struct PresentableAnswer {
     let calculation: String
     let answer: String
     let wrongAnswer: String?
-    let isCorrect: Bool
+    
+    var isCorrect: Bool {
+        return wrongAnswer == nil
+    }
 }
 
 class ResultsViewController: UIViewController {
@@ -59,15 +62,19 @@ extension ResultsViewController: UITableViewDataSource {
     
     private func correctAnswerCell(_ answer: PresentableAnswer) -> CorrectAnswerCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
-        cell.label.configure(withCalculation: answer.calculation, answer: answer.answer, wrongAnswer: nil)
+        cell.configure(withCalculation: answer.calculation, answer: answer.answer)
         
         return cell
     }
     
     private func wrongAnswerCell(_ answer: PresentableAnswer) -> WrongAnswerCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
-        cell.label.configure(withCalculation: answer.calculation, answer: answer.answer, wrongAnswer: answer.wrongAnswer)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as? WrongAnswerCell,
+            let wrongAnswer = answer.wrongAnswer else {
+                fatalError("Error appears while creating wrong answer cell")
+        }
+        
+        cell.configure(withCalculation: answer.calculation, correctAnswer: answer.answer, wrongAnswer: wrongAnswer)
+        
         return cell
     }
     

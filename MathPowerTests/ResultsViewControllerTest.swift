@@ -22,8 +22,7 @@ class ResultsViewControllerTest: XCTestCase {
         let answer = "2"
         let sut = makeSUT(answers: [makeDummyAnswer(
             calculation: calculation,
-            answer: answer,
-            isCorrect: true)])
+            answer: answer)])
         guard let cell = sut.tableView.cell(at: 0) as? CorrectAnswerCell else {
             XCTFail("Expected non-nil correct answer cell at this point")
             return
@@ -41,8 +40,7 @@ class ResultsViewControllerTest: XCTestCase {
         let sut = makeSUT(answers: [makeDummyAnswer(
             calculation: calculation,
             answer: answer,
-            wrongAnswer: wrongAnswer,
-            isCorrect: false)])
+            wrongAnswer: wrongAnswer)])
         guard let cell = sut.tableView.cell(at: 0) as? WrongAnswerCell else {
             XCTFail("Expected non-nil wrong answer cell at this point")
             return
@@ -51,16 +49,6 @@ class ResultsViewControllerTest: XCTestCase {
         XCTAssertEqual(cell.label.calculation, calculation)
         XCTAssertEqual(cell.label.answer, answer)
         XCTAssertEqual(cell.label.wrongAnswer, wrongAnswer)
-    }
-    
-    
-    func test_viewDidLoad_twoAnswers_rendersWrongAndCorrectAnswerCells() {
-        let sut = makeSUT(answers: [makeDummyAnswer(isCorrect: false), makeDummyAnswer(isCorrect: true)])
-        let wrongCell = sut.tableView.cell(at: 0) as? WrongAnswerCell
-        let correctCell = sut.tableView.cell(at: 1) as? CorrectAnswerCell
-        
-        XCTAssertNotNil(wrongCell)
-        XCTAssertNotNil(correctCell)
     }
     
     func makeSUT(
@@ -76,13 +64,11 @@ class ResultsViewControllerTest: XCTestCase {
     func makeDummyAnswer(
         calculation: String = "",
         answer: String = "",
-        wrongAnswer: String? = nil,
-        isCorrect: Bool = true) -> PresentableAnswer {
+        wrongAnswer: String? = nil) -> PresentableAnswer {
         return PresentableAnswer(
             calculation: calculation,
             answer: answer,
-            wrongAnswer: wrongAnswer,
-            isCorrect: isCorrect)
+            wrongAnswer: wrongAnswer)
     }
     
 }
