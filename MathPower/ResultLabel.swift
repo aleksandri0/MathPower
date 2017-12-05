@@ -11,10 +11,34 @@ class ResultLabel: UILabel {
         self.answer = answer
         self.wrongAnswer = wrongAnswer
         
-        let presentableWrongAnswer = wrongAnswer.flatMap { "(\($0))" } ?? ""
+        let attributedString = NSMutableAttributedString(string: calculation + " = ")
+        attributedString.insert(answer, color: UIColor.green)
         
-        text = calculation + " = " + answer + presentableWrongAnswer
+        if let wrongAnswer = wrongAnswer {
+            attributedString.insert("(")
+            attributedString.insert(wrongAnswer, color: UIColor.red)
+            attributedString.insert(")")
+        }
         
+        attributedText = attributedString
     }
     
 }
+
+extension NSMutableAttributedString {
+    
+    func insert(_ string:String) {
+        insert(NSAttributedString(string: string), at: length)
+    }
+    
+    func insert(_ string: String, color: UIColor) {
+        let attributedString = NSAttributedString(
+            string: string,
+            attributes: [NSAttributedStringKey.foregroundColor : color])
+        insert(attributedString, at: length)
+    }
+}
+
+
+
+
