@@ -1,5 +1,9 @@
 import UIKit
 
+struct PresentableAnswer {
+    let isCorrect: Bool
+}
+
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -7,9 +11,9 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var summary = ""
     private var screenTitle = ""
-    private var answers = [String]()
+    private var answers = [PresentableAnswer]()
     
-    convenience init(title: String, summary: String, answers: [String]) {
+    convenience init(title: String, summary: String, answers: [PresentableAnswer]) {
         self.init()
         
         self.screenTitle = title
@@ -36,7 +40,11 @@ extension ResultsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let answer = answers[indexPath.row]
+        if answer.isCorrect {
+            return CorrectAnswerCell()
+        }
+        return WrongAnswerCell()
     }
     
     
