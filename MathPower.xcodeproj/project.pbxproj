@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */; };
 		FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */; };
 		FA45CDF31FBEE8BC00CCDC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */; };
 		FA45CDF61FBEE8BC00CCDC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF41FBEE8BC00CCDC1D /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewControllerTest.swift; sourceTree = "<group>"; };
 		FA45CDE81FBEE8BC00CCDC1D /* MathPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */,
 				FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */,
 				FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */,
+				FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */,
 			);
 			path = MathPowerTests;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */,
 				FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */,
 				FACF8FF51FBF49FC00688000 /* ResultsViewControllerTest.swift in Sources */,
+				FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
