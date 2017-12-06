@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */; };
+		FA380F8C1FD864CE00311342 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */; };
 		FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */; };
 		FA45CDF31FBEE8BC00CCDC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */; };
 		FA45CDF61FBEE8BC00CCDC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF41FBEE8BC00CCDC1D /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewControllerTest.swift; sourceTree = "<group>"; };
+		FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
 		FA45CDE81FBEE8BC00CCDC1D /* MathPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */,
 				FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */,
 				FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */,
+				FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */,
 			);
 			path = MathPower;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				FA92BE171FD6A26B000224B9 /* CorrectAnswerCell.swift in Sources */,
 				FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */,
 				FA92BE231FD6DE4D000224B9 /* UITableViewExtension.swift in Sources */,
+				FA380F8C1FD864CE00311342 /* DifficultyViewController.swift in Sources */,
 				FA92BE211FD6DE16000224B9 /* PresentableAnswer.swift in Sources */,
 				FA92BE1D1FD6C4C3000224B9 /* ResultLabel.swift in Sources */,
 				FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */,
