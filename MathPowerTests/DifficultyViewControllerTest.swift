@@ -1,4 +1,5 @@
 import XCTest
+import MathPowerLogic
 @testable import MathPower
 
 class DifficultyViewControllerTest: XCTestCase {
@@ -17,9 +18,7 @@ class DifficultyViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT(title: title).title, title)
     }
     
-    func makeSUT(
-        difficulties: [String] = [String](),
-        title: String = "") -> DifficultyViewController {
+    func makeSUT(difficulties: [String] = [String](), title: String = "") -> DifficultyViewController {
         let viewController = DifficultyViewController(difficulties: difficulties, title: title)
         _ = viewController.view
         

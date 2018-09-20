@@ -1,4 +1,5 @@
 import UIKit
+import MathPowerLogic
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

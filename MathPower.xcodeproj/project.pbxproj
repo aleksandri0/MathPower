@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */; };
 		FA380F8C1FD864CE00311342 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */; };
+		FA380F8E1FD9478700311342 /* PresentableDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F8D1FD9478700311342 /* PresentableDifficulty.swift */; };
 		FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */; };
 		FA45CDF31FBEE8BC00CCDC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */; };
 		FA45CDF61FBEE8BC00CCDC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA45CDF41FBEE8BC00CCDC1D /* LaunchScreen.storyboard */; };
@@ -38,9 +39,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		483C316F21538BFF00D05452 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		483C31AE2153942A00D05452 /* MathPowerLogic_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MathPowerLogic_iOS.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/MathPower-eddkevphyslyedcyarcxckcraatd/Build/Products/Debug-iphoneos/MathPowerLogic_iOS.framework"; sourceTree = "<group>"; };
 		FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewControllerTest.swift; sourceTree = "<group>"; };
 		FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
+		FA380F8D1FD9478700311342 /* PresentableDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableDifficulty.swift; sourceTree = "<group>"; };
 		FA45CDE81FBEE8BC00CCDC1D /* MathPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,11 +98,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		483C31AD2153942400D05452 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483C31AE2153942A00D05452 /* MathPowerLogic_iOS.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		483C31AF2153967100D05452 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				483C31B5215396DB00D05452 /* Extensions */,
+				FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */,
+				FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */,
+				FA45CDF41FBEE8BC00CCDC1D /* LaunchScreen.storyboard */,
+				FA45CDF71FBEE8BC00CCDC1D /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		483C31B02153967F00D05452 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				483C31B2215396B300D05452 /* ViewController */,
+				483C31B3215396BF00D05452 /* Cell */,
+				483C31B4215396C800D05452 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		483C31B12153969300D05452 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA380F8D1FD9478700311342 /* PresentableDifficulty.swift */,
+				FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		483C31B2215396B300D05452 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */,
+				FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */,
+				FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */,
+				FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */,
+				FA91EE7D1FD5A03800D917A8 /* ResultsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		483C31B3215396BF00D05452 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA92BE161FD6A26B000224B9 /* CorrectAnswerCell.swift */,
+				FA92BE181FD6A7F6000224B9 /* WrongAnswerCell.swift */,
+				FA92BE1A1FD6C452000224B9 /* CorrectAnswerCell.xib */,
+				FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		483C31B4215396C800D05452 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA92BE1C1FD6C4C3000224B9 /* ResultLabel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		483C31B5215396DB00D05452 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FA45CDDF1FBEE8BC00CCDC1D = {
 			isa = PBXGroup;
 			children = (
 				FA45CDEA1FBEE8BC00CCDC1D /* MathPower */,
 				FA45CDFF1FBEE8BC00CCDC1D /* MathPowerTests */,
+				483C31AD2153942400D05452 /* Frameworks */,
 				FA45CDE91FBEE8BC00CCDC1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,22 +198,9 @@
 		FA45CDEA1FBEE8BC00CCDC1D /* MathPower */ = {
 			isa = PBXGroup;
 			children = (
-				FA45CDEB1FBEE8BC00CCDC1D /* AppDelegate.swift */,
-				FA45CDF21FBEE8BC00CCDC1D /* Assets.xcassets */,
-				FA45CDF41FBEE8BC00CCDC1D /* LaunchScreen.storyboard */,
-				FA45CDF71FBEE8BC00CCDC1D /* Info.plist */,
-				FA45CE0D1FBEF5D400CCDC1D /* CalculationViewController.xib */,
-				FA45CE0F1FBEF60600CCDC1D /* CalculationViewController.swift */,
-				FACF8FF61FBF4A8F00688000 /* ResultsViewController.swift */,
-				FA91EE7D1FD5A03800D917A8 /* ResultsViewController.xib */,
-				FA92BE161FD6A26B000224B9 /* CorrectAnswerCell.swift */,
-				FA92BE181FD6A7F6000224B9 /* WrongAnswerCell.swift */,
-				FA92BE1A1FD6C452000224B9 /* CorrectAnswerCell.xib */,
-				FA92BE1C1FD6C4C3000224B9 /* ResultLabel.swift */,
-				FA92BE1E1FD6D559000224B9 /* WrongAnswerCell.xib */,
-				FA92BE201FD6DE16000224B9 /* PresentableAnswer.swift */,
-				FA92BE221FD6DE4D000224B9 /* UITableViewExtension.swift */,
-				FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */,
+				483C31B02153967F00D05452 /* UI */,
+				483C31AF2153967100D05452 /* Misc */,
+				483C31B12153969300D05452 /* Model */,
 			);
 			path = MathPower;
 			sourceTree = "<group>";
@@ -145,6 +227,7 @@
 				FA45CDE41FBEE8BC00CCDC1D /* Sources */,
 				FA45CDE51FBEE8BC00CCDC1D /* Frameworks */,
 				FA45CDE61FBEE8BC00CCDC1D /* Resources */,
+				483C316F21538BFF00D05452 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA380F8E1FD9478700311342 /* PresentableDifficulty.swift in Sources */,
 				FA92BE191FD6A7F6000224B9 /* WrongAnswerCell.swift in Sources */,
 				FA92BE171FD6A26B000224B9 /* CorrectAnswerCell.swift in Sources */,
 				FA45CE101FBEF60600CCDC1D /* CalculationViewController.swift in Sources */,
@@ -335,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
