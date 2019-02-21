@@ -39,19 +39,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		483C316F21538BFF00D05452 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		483C31AE2153942A00D05452 /* MathPowerLogic_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MathPowerLogic_iOS.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/MathPower-eddkevphyslyedcyarcxckcraatd/Build/Products/Debug-iphoneos/MathPowerLogic_iOS.framework"; sourceTree = "<group>"; };
 		FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewControllerTest.swift; sourceTree = "<group>"; };
@@ -227,7 +214,6 @@
 				FA45CDE41FBEE8BC00CCDC1D /* Sources */,
 				FA45CDE51FBEE8BC00CCDC1D /* Frameworks */,
 				FA45CDE61FBEE8BC00CCDC1D /* Resources */,
-				483C316F21538BFF00D05452 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -484,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VGC6AR5XL;
-				INFOPLIST_FILE = MathPower/Info.plist;
+				INFOPLIST_FILE = MathPower/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigmasoftware.MathPower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,7 +485,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VGC6AR5XL;
-				INFOPLIST_FILE = MathPower/Info.plist;
+				INFOPLIST_FILE = MathPower/Misc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sigmasoftware.MathPower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
