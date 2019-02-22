@@ -29,11 +29,22 @@ class DifficultyViewControllerTest: XCTestCase {
     }
 
     func test_difficultySelected_difficultyRouted() {
-        let difficulties = makeDummyPresentableDifficulties(withNames: ["Easy", "Medium"])
+        let firstDifficultyTitle = "Easy"
+        let secondDifficultyTitle = "Medium"
+        let difficulties = makeDummyPresentableDifficulties(withNames: [firstDifficultyTitle, secondDifficultyTitle])
         var receivedDifficulty = ""
         let sut = makeSUT(difficulties: difficulties) { receivedDifficulty = $0 }
         sut.difficultiesButtons[1].initiateTap()
-        XCTAssertEqual(receivedDifficulty, "Medium")
+        XCTAssertEqual(receivedDifficulty, secondDifficultyTitle)
+    }
+
+    func test_difficultiesButtonsTitles_areCorrect() {
+        let firstDifficultyTitle = "Easy"
+        let secondDifficultyTitle = "Medium"
+        let difficulties = makeDummyPresentableDifficulties(withNames: [firstDifficultyTitle, secondDifficultyTitle])
+        let sut = makeSUT(difficulties: difficulties)
+        XCTAssertEqual(sut.difficultiesButtons[0].title, firstDifficultyTitle)
+        XCTAssertEqual(sut.difficultiesButtons[1].title, secondDifficultyTitle)
     }
 }
 
@@ -60,5 +71,8 @@ extension DifficultyViewControllerTest {
 extension UIButton {
     func initiateTap() {
         self.sendActions(for: .touchUpInside)
+    }
+    var title: String? {
+        return title(for: .normal)
     }
 }
