@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2056B622202C1100694891 /* NavigationControllerRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2056B522202C1100694891 /* NavigationControllerRouterTest.swift */; };
+		FA2056B922202CE800694891 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2056B822202CE800694891 /* NavigationControllerRouter.swift */; };
+		FA2056C522202E3F00694891 /* MathPowerLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2056C422202E3F00694891 /* MathPowerLogic.framework */; };
+		FA2056C622202E3F00694891 /* MathPowerLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2056C422202E3F00694891 /* MathPowerLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2056CD2220326B00694891 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2056CC2220326B00694891 /* ViewControllerFactory.swift */; };
 		FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */; };
 		FA380F8C1FD864CE00311342 /* DifficultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */; };
 		FA380F8E1FD9478700311342 /* PresentableDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA380F8D1FD9478700311342 /* PresentableDifficulty.swift */; };
@@ -39,8 +44,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA2056C722202E3F00694891 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA2056C622202E3F00694891 /* MathPowerLogic.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		483C31AE2153942A00D05452 /* MathPowerLogic_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MathPowerLogic_iOS.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/MathPower-eddkevphyslyedcyarcxckcraatd/Build/Products/Debug-iphoneos/MathPowerLogic_iOS.framework"; sourceTree = "<group>"; };
+		FA2056B522202C1100694891 /* NavigationControllerRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouterTest.swift; sourceTree = "<group>"; };
+		FA2056B822202CE800694891 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
+		FA2056C422202E3F00694891 /* MathPowerLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MathPowerLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2056CB22202E7F00694891 /* MathPowerLogic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MathPowerLogic.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MathPower-cusarzlkhattqyginldoddsysrwu/Build/Products/Debug-iphoneos/MathPowerLogic.framework"; sourceTree = "<group>"; };
+		FA2056CC2220326B00694891 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		FA380F851FD859A900311342 /* DifficultyViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewControllerTest.swift; sourceTree = "<group>"; };
 		FA380F8B1FD864CE00311342 /* DifficultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyViewController.swift; sourceTree = "<group>"; };
 		FA380F8D1FD9478700311342 /* PresentableDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableDifficulty.swift; sourceTree = "<group>"; };
@@ -72,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2056C522202E3F00694891 /* MathPowerLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,14 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		483C31AD2153942400D05452 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				483C31AE2153942A00D05452 /* MathPowerLogic_iOS.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		483C31AF2153967100D05452 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 		483C31B02153967F00D05452 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FA2056CC2220326B00694891 /* ViewControllerFactory.swift */,
 				483C31B2215396B300D05452 /* ViewController */,
 				483C31B3215396BF00D05452 /* Cell */,
 				483C31B4215396C800D05452 /* View */,
@@ -163,12 +180,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FA2056B722202CDD00694891 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA2056B822202CE800694891 /* NavigationControllerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FA2056C922202E7500694891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA2056CB22202E7F00694891 /* MathPowerLogic.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA45CDDF1FBEE8BC00CCDC1D = {
 			isa = PBXGroup;
 			children = (
+				FA2056C422202E3F00694891 /* MathPowerLogic.framework */,
+				FA2056C922202E7500694891 /* Frameworks */,
 				FA45CDEA1FBEE8BC00CCDC1D /* MathPower */,
 				FA45CDFF1FBEE8BC00CCDC1D /* MathPowerTests */,
-				483C31AD2153942400D05452 /* Frameworks */,
 				FA45CDE91FBEE8BC00CCDC1D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +219,7 @@
 		FA45CDEA1FBEE8BC00CCDC1D /* MathPower */ = {
 			isa = PBXGroup;
 			children = (
+				FA2056B722202CDD00694891 /* Router */,
 				483C31B02153967F00D05452 /* UI */,
 				483C31AF2153967100D05452 /* Misc */,
 				483C31B12153969300D05452 /* Model */,
@@ -196,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				FA45CE021FBEE8BC00CCDC1D /* Info.plist */,
+				FA2056B522202C1100694891 /* NavigationControllerRouterTest.swift */,
 				FA45CE0B1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift */,
 				FACF8FF01FBF293500688000 /* AnswerValidatorTest.swift */,
 				FACF8FF41FBF49FC00688000 /* ResultsViewControllerTest.swift */,
@@ -214,6 +250,7 @@
 				FA45CDE41FBEE8BC00CCDC1D /* Sources */,
 				FA45CDE51FBEE8BC00CCDC1D /* Frameworks */,
 				FA45CDE61FBEE8BC00CCDC1D /* Resources */,
+				FA2056C722202E3F00694891 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,7 +357,9 @@
 				FA92BE211FD6DE16000224B9 /* PresentableAnswer.swift in Sources */,
 				FA92BE1D1FD6C4C3000224B9 /* ResultLabel.swift in Sources */,
 				FA45CDEC1FBEE8BC00CCDC1D /* AppDelegate.swift in Sources */,
+				FA2056CD2220326B00694891 /* ViewControllerFactory.swift in Sources */,
 				FACF8FF71FBF4A8F00688000 /* ResultsViewController.swift in Sources */,
+				FA2056B922202CE800694891 /* NavigationControllerRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +369,7 @@
 			files = (
 				FACF8FF11FBF293500688000 /* AnswerValidatorTest.swift in Sources */,
 				FA45CE0C1FBEF46A00CCDC1D /* CalculationViewControllerTest.swift in Sources */,
+				FA2056B622202C1100694891 /* NavigationControllerRouterTest.swift in Sources */,
 				FACF8FF51FBF49FC00688000 /* ResultsViewControllerTest.swift in Sources */,
 				FA380F861FD859A900311342 /* DifficultyViewControllerTest.swift in Sources */,
 			);
