@@ -8,8 +8,8 @@ class DifficultyViewControllerTest: XCTestCase {
     }
     
     func test_viewDidLoad_threeDifficulties_threeDifficultiesRouted() {
-        let difficulties = ["Easy", "Medium", "Hard"]
-        XCTAssertEqual(makeSUT(difficulties: difficulties).difficulties, difficulties)
+        let dummyDifficulties = makeDummyDifficulties()
+        XCTAssertEqual(makeSUT(difficulties: dummyDifficulties).difficulties, dummyDifficulties)
     }
     
     func test_viewDidLoad_titleRouted() {
@@ -23,13 +23,13 @@ class DifficultyViewControllerTest: XCTestCase {
     }
 
     func test_viewDidLoad_DifficultiesButtonsCreated() {
-        let difficulties = ["Easy", "Medium", "Hard"]
+        let difficulties = makeDummyDifficulties()
         let sut = makeSUT(difficulties: difficulties)
         XCTAssertEqual(sut.difficultiesButtons.count, difficulties.count)
     }
 
     func test_difficultySelected_difficultyRouted() {
-        let difficulties = ["Easy", "Medium", "Hard"]
+        let difficulties = makeDummyPresentableDifficulties(withNames: ["Easy", "Medium"])
         var receivedDifficulty = ""
         let sut = makeSUT(difficulties: difficulties) { receivedDifficulty = $0 }
         sut.difficultiesButtons[1].initiateTap()
@@ -38,7 +38,13 @@ class DifficultyViewControllerTest: XCTestCase {
 }
 
 extension DifficultyViewControllerTest {
-    func makeSUT(difficulties: [String] = [String](),
+    func makeDummyPresentableDifficulties(withNames names: [String]) -> [PresentableDifficulty] {
+        return names.map { PresentableDifficulty(name: $0) }
+    }
+    func makeDummyDifficulties() -> [PresentableDifficulty] {
+        return makeDummyPresentableDifficulties(withNames: ["Easy", "Medium", "Hard"])
+    }
+    func makeSUT(difficulties: [PresentableDifficulty] = [PresentableDifficulty](),
                  title: String = "",
                  submitDifficultyCallback: @escaping (String) -> Void = { _ in }) -> DifficultyViewController {
         let viewController = DifficultyViewController(difficulties: difficulties,

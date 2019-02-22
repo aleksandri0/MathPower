@@ -1,5 +1,5 @@
 import Foundation
 
-struct PresentableDifficulty {
+struct PresentableDifficulty: Equatable {
     let name: String
 }
