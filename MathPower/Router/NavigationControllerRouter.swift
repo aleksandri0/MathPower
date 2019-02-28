@@ -11,16 +11,18 @@ class NavigationControllerRouter: Router {
         self.viewControllerFactory = viewControllerFactory
     }
 
-    func routeToDifficulty(difficulties: [Difficulty], callBack: @escaping (Difficulty) -> Void) {
+    func routeToDifficulties(_ difficulties: [Difficulty], callback: @escaping (Difficulty) -> Void) {
         let difficultyViewController = viewControllerFactory.difficultyViewController(difficulties: difficulties,
-                                                                                      title: "",
-                                                                                      submitDifficultyCallback: callBack)
-        navigationController.pushViewController(difficultyViewController, animated: true)
+                                                                                      submitDifficultyCallback: callback)
+        navigationController.pushViewController(difficultyViewController, animated: false)
     }
-    func routeTo(calculation: String, difficulty: Difficulty, callBack: @escaping (String) -> Void) {
-
+    func routeToCalculation(_ calculation: String, difficulty: Difficulty, callback: @escaping (String) -> Void) {
+        let calculationViewController = viewControllerFactory.calculationViewController(calculation: calculation,
+                                                                                        difficulty: difficulty,
+                                                                                        submitAnswerCallback: callback)
+        navigationController.pushViewController(calculationViewController, animated: false)
     }
-    func routeTo(result: [String : String]?, restartCallBack: @escaping () -> Void) {
+    func routeToResult(_ result: [String : String]?, restartCallback: @escaping () -> Void) {
 
     }
 }

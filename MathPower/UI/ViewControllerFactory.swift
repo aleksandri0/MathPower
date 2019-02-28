@@ -4,6 +4,8 @@ import MathPowerLogic
 
 protocol ViewControllerFactory {
     func difficultyViewController(difficulties: [Difficulty],
-                                  title: String,
                                   submitDifficultyCallback: @escaping (Difficulty) -> Void) -> UIViewController
+    func calculationViewController(calculation: String,
+                                   difficulty: Difficulty,
+                                   submitAnswerCallback: @escaping (String) -> Void) -> UIViewController
 }
